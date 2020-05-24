@@ -14,3 +14,7 @@ To make this Python module work with your Raspberry Pi follow the steps listed b
 3. Install pigpio module in python with ```pip install pigpio```
 4. Run pigpio daemon in the OS with ```sudo pigpiod``` prior to using the MS8607 module in Python
 5. Now that you have the daemon running in background, you can import and use the MS8607 module in your Python project ```from MS8607 import MS8607```
+
+## MS8607 class methods
+### MS8607() - constructor
+Initializes connection with the sensors, resets the sensors and fetches conversion coefficients from 0x76 - temperature and pressure sensor. If something goes wrong at this stage, there is no exceptions handling, so the user will get a standard error message from python interpreter.
