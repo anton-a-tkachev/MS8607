@@ -1,10 +1,11 @@
 # MS8607
 This Python module contains the class that encapsulates basic methods to work with the MS8607 temperature-pressure-humidity sensor board.
-The MS8607 board connects to your Raspberry Pi via I2C interface. For Raspberry Pi models A+/B+/2B/3B/3B+/3A+/Zero I2C interface is implemented on the following GPIO pins:
-| GPIO PIN #4 | 5V power | GROVE wire color: RED    |
-| GPIO PIN #6 | Ground   | GROVE wire color: BLACK  |
-| GPIO PIN #3 | I2C SDA  | GROVE wire color: WHITE  |
-| GPIO PIN #5 | I2C SCL  | GROVE wire color: YELLOW |
+The MS8607 board connects to your Raspberry Pi via I2C interface. For Raspberry Pi models A+/B+/2B/3B/3B+/3A+/Zero I2C interface is implemented on the following GPIO pins
+
+GPIO PIN #4 | 5V power | GROVE wire color: RED
+GPIO PIN #6 | Ground   | GROVE wire color: BLACK
+GPIO PIN #3 | I2C SDA  | GROVE wire color: WHITE
+GPIO PIN #5 | I2C SCL  | GROVE wire color: YELLOW
 
 For other Raspberry Pi models please refer to GPIO pinout documentation
 
