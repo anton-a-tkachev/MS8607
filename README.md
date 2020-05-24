@@ -18,24 +18,28 @@ To make this Python module work with your Raspberry Pi follow the steps listed b
 4. Run pigpio daemon in the OS with ```sudo pigpiod``` prior to using the MS8607 module in Python
 5. Now that you have the daemon running in background, you can import and use the MS8607 module in your Python project ```from MS8607 import MS8607```
 
-Detailed documentation of pigpio Python module can be found on [pigpio library](http://abyz.me.uk/rpi/pigpio/python.html)
+Detailed description of pigpio Python module can be found on [pigpio library](http://abyz.me.uk/rpi/pigpio/python.html)
 
 ## MS8607 class methods
 ### MS8607() - constructor
 Initializes connection with the sensors, resets the sensors and fetches conversion coefficients from 0x76 - temperature and pressure sensor. The constructor takes two variables:
 - I2C bus number (by default ```i2c_bus = 1```)
 - pigpio connection handle (by default ```pi = pigpio.pi()```)
-If something goes wrong at this stage, there is no exceptions handling, so the user will get a standard error message from python interpreter.
+When something goes wrong at this stage, there is no exceptions handling, so the user will get a standard error message from python interpreter.
 
 ### get_t() - get temperature
 Attempts to fetch temperature data from the MS8607 board. Returns a tuple:
 - Temperature in degrees Celsius,
 - TEMP - auxilary variable used for calculations,
 - dT - auxilary variable used for calculations
-If unable to fetch the data or any other error, returns None values.
+When unable to fetch the data or any other error, returns ```None``` values.
 
 ### get_tp() - get temperature and pressure
 Returns a tuple:
 - Temperature in degrees Celsius,
 - Pressure in mbar or hPa (which is the same)
-If unable to fetch the data or any other error, returns None values. Note that the pressure measurement depends on the ambient temperature, so that there is no method for independent pressure measurement.
+When unable to fetch the data or any other error, returns ```None``` values. Note that the pressure measurement depends on the ambient temperature, so that there is no method for independent pressure measurement.
+
+### get_rh() - get relative humidity
+Returns relative humidity in %. Temperature reading can be passed to this method for a slightly better accuracy of the relative humidity measurement. If no temperature is passed to the method, then it measures the relative humidity with no correction. When unable to fetch the data or any other error, returns ```None```.
+
