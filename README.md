@@ -20,7 +20,10 @@ To make this Python module work with your Raspberry Pi follow the steps listed b
 
 ## MS8607 class methods
 ### MS8607() - constructor
-Initializes connection with the sensors, resets the sensors and fetches conversion coefficients from 0x76 - temperature and pressure sensor. If something goes wrong at this stage, there is no exceptions handling, so the user will get a standard error message from python interpreter.
+Initializes connection with the sensors, resets the sensors and fetches conversion coefficients from 0x76 - temperature and pressure sensor. The constructor takes two variables:
+- I2C bus number (by default ```i2c_bus = 1```)
+- pigpio connection handle (by default ```pi = pigpio.pi()```)
+If something goes wrong at this stage, there is no exceptions handling, so the user will get a standard error message from python interpreter.
 
 ### get_t() - get temperature
 Attempts to fetch temperature data from the MS8607 board. Returns a tuple:
