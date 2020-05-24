@@ -1,7 +1,7 @@
 # MS8607 Python module for Raspberry Pi
-This Python module contains the class that encapsulates basic methods to work with the MS8607 temperature-pressure-humidity sensor board.
+This Python module contains the class that encapsulates basic methods to communicate with the MS8607 temperature-pressure-humidity sensor board via direct I2C interface.
 
-The MS8607 board connects to your Raspberry Pi via I2C interface. For Raspberry Pi models A+/B+/2B/3B/3B+/3A+/Zero I2C interface is implemented on the following GPIO pins:
+The MS8607 board connects to your Raspberry Pi via direct I2C interface. For Raspberry Pi models A+/B+/2B/3B/3B+/3A+/Zero I2C interface is implemented on the following GPIO pins:
 
 GPIO PIN | I2C wire |  GROVE wire color
 ---|---|---
