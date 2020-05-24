@@ -21,7 +21,7 @@ To make this Python module work with your Raspberry Pi follow the steps listed b
 Detailed description of pigpio Python module can be found on [pigpio library](http://abyz.me.uk/rpi/pigpio/python.html)
 
 ## Basic usage
-For minimal usage example please refer to the file [example.py](https://github.com/anton-a-tkachev/MS8607/blob/master/example.py). 
+For a minimal usage example please refer to the file [example.py](https://github.com/anton-a-tkachev/MS8607/blob/master/example.py). 
 You can simply run the file with ```python example.py``` from your terminal
 
 ## MS8607 list of methods
