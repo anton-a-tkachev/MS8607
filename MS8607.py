@@ -21,7 +21,7 @@ class MS8607:
 
     def __init__(self, i2c_bus=1, pi=pi()):
         """Initializes connection with the sensors, resets the sensors and fetches conversion coefficients from 0x76 - temperature and pressure sensor.
-        If something goes wrong at this stage, there is no exceptions handling, so the user will get a standard error message from python interpreter."""
+        When something goes wrong at this stage, there is no exceptions handling, so the user will get a standard error message from python interpreter."""
         self.pi = pi
         self._0x76 = self.pi.i2c_open(i2c_bus=i2c_bus, i2c_address=0x76)    # T and P sensor
         self.pi.i2c_write_device(self._0x76, [0x1E])    # send reset command to 0x76       
@@ -45,7 +45,7 @@ class MS8607:
             TEMP - auxilary variable used for calculations,
             dT - auxilary variable used for calculations
         )
-        If unable to fetch the data or any other error, returns None values."""
+        When unable to fetch the data or any other error, returns None values."""
         try:
             self.pi.i2c_write_device(self._0x76, [0x5A])
             sleep(0.030)
@@ -66,7 +66,7 @@ class MS8607:
             Temperature in degrees Celsius,
             Pressure in mbar or hPa (which is the same)
         )
-        If unable to fetch the data or any other error, returns None values.
+        When unable to fetch the data or any other error, returns None values.
         Note that the pressure measurement depends on the ambient temperature, so that there is no method for independent pressure measurement.
         """
         T, TEMP, dT = self.get_t()
@@ -106,7 +106,7 @@ class MS8607:
 
     def get_rh(self, T = 20.0):
         """Returns relative humidity in %. Temperature reading can be passed to this method for a slightly better accuracy of the relative humidity measurement. If no temperature is passed to the method, then it measures the relative humidity with no correction.
-        If unable to fetch the data or any other error, returns None."""
+        When unable to fetch the data or any other error, returns None."""
         try:
             self.pi.i2c_write_device(self._0x40, [0xE5])
             word = self.pi.i2c_read_device(self._0x40, 2)[1]
@@ -126,7 +126,7 @@ class MS8607:
             Pressure in mbar or hPa (which is the same),
             Relative humidity in %
         )
-        If unable to fetch the data or any other error, returns None.
+        When unable to fetch the data or any other error, returns None.
         """
         T, P = self.get_tp()
         RH = self.get_rh(T)
@@ -139,7 +139,7 @@ class MS8607:
             Temperature in degrees Celsius,
             Relative humidity in %
         )
-        If unable to fetch the data or any other error, returns None.
+        When unable to fetch the data or any other error, returns None.
         """
         T = self.get_t()[0]
         RH = self.get_rh(T)
