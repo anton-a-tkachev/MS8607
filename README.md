@@ -12,6 +12,8 @@ GPIO PIN | I²C wire |  GROVE wire color
 
 ![Raspberry Pi GPIO pinout diagram](https://github.com/anton-a-tkachev/MS8607/blob/master/GPIO-Pinout-Diagram-2.png "Raspberry Pi GPIO pinout diagram")
 
+![MS8607 connected to Raspberry Pi via Grove cable](https://github.com/anton-a-tkachev/MS8607/blob/master/IMG_20200510_180430.jpg)
+
 For other Raspberry Pi models, please refer to GPIO pinout documentation.
 
 To make this Python module work with your Raspberry Pi follow the steps listed below:
