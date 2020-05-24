@@ -69,14 +69,14 @@ Returns a tuple:
 When unable to fetch the data or any other error, returns ```None``` values. Note that the pressure measurement depends on the ambient temperature, so that there is no method for independent pressure measurement.
 
 ### ```get_rh(T)``` - measure relative humidity
-Returns relative humidity in %. Temperature reading can be passed to this method for a slightly better accuracy of the relative humidity measurement. If no temperature is provided to the method, then it measures the relative humidity with no correction. 
+Returns relative humidity in %. Ambient temperature can be passed to this method for a slightly better accuracy of the relative humidity measurement. If no temperature is provided to the method, then it measures the relative humidity without the temperature compensation. 
 When unable to fetch the data or any other error, returns ```None```.
 
 ### ```get_tph()``` - measure temperature, pressure and humidity
 Returns a tuple:
 - Temperature in degrees Celsius,
 - Pressure in mbar or hPa (which is the same),
-- Relative humidity in %
+- Relative humidity in % (temperature compensated for a slightly better accuracy)
 
 When unable to fetch the data or any other error, returns ```None```.
 
