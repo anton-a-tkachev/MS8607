@@ -9,7 +9,7 @@ GPIO PIN | I2C wire |  GROVE wire color
 #3 | SDA | WHITE
 #5 | SCL | YELLOW
 
-![Raspberry Pi GPIO pinout diagram](https://www.raspberrypi.org/documentation/usage/gpio/images/GPIO-Pinout-Diagram-2.png "Raspberry Pi GPIO pinout diagram")
+![Raspberry Pi GPIO pinout diagram](https://github.com/anton-a-tkachev/MS8607/blob/master/GPIO-Pinout-Diagram-2.png "Raspberry Pi GPIO pinout diagram")
 
 For other Raspberry Pi models please refer to GPIO pinout documentation
 
