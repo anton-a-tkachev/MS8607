@@ -33,7 +33,8 @@ The constructor takes two variables:
 When something goes wrong at this stage, there is no exceptions handling, so the user will get a standard error message from python interpreter.
 
 ### get_t() - measure temperature
-Attempts to fetch temperature data from the MS8607 board. Returns a tuple:
+Attempts to fetch temperature data from the MS8607 board.
+Returns a tuple:
 - Temperature in degrees Celsius,
 - TEMP - auxilary variable used for calculations,
 - dT - auxilary variable used for calculations
@@ -53,4 +54,10 @@ Returns a tuple:
 - Temperature in degrees Celsius,
 - Pressure in mbar or hPa (which is the same),
 - Relative humidity in %
-When unable to fetch the data or any other error, returns ``None```.
+When unable to fetch the data or any other error, returns ```None```.
+
+### get_th
+Returns a tuple:
+- Temperature in degrees Celsius,
+- Relative humidity in %
+When unable to fetch the data or any other error, returns ```None```.
