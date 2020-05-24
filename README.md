@@ -15,7 +15,7 @@ GPIO PIN | I2C wire |  GROVE wire color
 For other Raspberry Pi models please refer to GPIO pinout documentation
 
 To make this Python module work with your Raspberry Pi follow the steps listed below:
-1. Activate I2C interface in your OS. In Debian (Raspbian) this can be done with the default configuration utility ```sudo raspi-config```
+1. Activate I2C interface in your OS. In Raspbian this can be done with the default configuration utility ```sudo raspi-config```
 2. Install pigpio daemon in the OS with ```sudo apt-get install pigpiod``` 
 3. Install pigpio module in python with ```pip install pigpio```
 4. Run pigpio daemon in the OS with ```sudo pigpiod``` prior to using the MS8607 module in Python
