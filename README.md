@@ -1,7 +1,7 @@
 # MS8607 Python module for Raspberry Pi via direct I²C
 This Python module contains the class that encapsulates basic methods to communicate with the MS8607 board via direct I²C interface.
 
-The MS8607 is a board equipped with a PHT-sensor (pressure-humidity-temperature) that connects to your Raspberry Pi via direct I²C interface. For Raspberry Pi models A+/B+/2B/3B/3B+/3A+/Zero the I²C interface uses the following GPIO pins:
+The MS8607 is a board equipped with a MS8607-02BA01 PHT-sensor (pressure-humidity-temperature) that connects to your Raspberry Pi via direct I²C interface. For Raspberry Pi models A+/B+/2B/3B/3B+/3A+/Zero the I²C interface uses the following GPIO pins:
 
 GPIO PIN | I²C wire |  GROVE wire color
 ---|---|---
