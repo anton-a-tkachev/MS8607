@@ -28,3 +28,9 @@ Attempts to fetch temperature data from the MS8607 board. Returns a tuple:
 - TEMP - auxilary variable used for calculations,
 - dT - auxilary variable used for calculations
 If unable to fetch the data or any other error, returns None values.
+
+### get_tp() - get temperature and pressure
+Returns a tuple:
+- Temperature in degrees Celsius,
+- Pressure in mbar or hPa (which is the same)
+If unable to fetch the data or any other error, returns None values. Note that the pressure measurement depends on the ambient temperature, so that there is no method for independent pressure measurement.
