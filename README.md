@@ -1,6 +1,7 @@
 # MS8607
 This Python module contains the class that encapsulates basic methods to work with the MS8607 temperature-pressure-humidity sensor board.
 The MS8607 board connects to your Raspberry Pi via I2C interface. For Raspberry Pi models A+/B+/2B/3B/3B+/3A+/Zero I2C interface is implemented on the following GPIO pins
+
 GPIO PIN | I2C wire |  GROVE wire color
 ---|---|---
 #4 | 5V power | RED
@@ -20,3 +21,10 @@ To make this Python module work with your Raspberry Pi follow the steps listed b
 ## MS8607 class methods
 ### MS8607() - constructor
 Initializes connection with the sensors, resets the sensors and fetches conversion coefficients from 0x76 - temperature and pressure sensor. If something goes wrong at this stage, there is no exceptions handling, so the user will get a standard error message from python interpreter.
+
+### get_t() - get temperature
+Attempts to fetch temperature data from the MS8607 board. Returns a tuple:
+- Temperature in degrees Celsius,
+- TEMP - auxilary variable used for calculations,
+- dT - auxilary variable used for calculations
+If unable to fetch the data or any other error, returns None values.
