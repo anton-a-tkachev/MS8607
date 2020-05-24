@@ -34,6 +34,7 @@ Initializes a connection with the sensors, resets the sensors and fetches conver
 The constructor takes two variables:
 - I2C bus number (by default ```i2c_bus = 1```)
 - pigpio connection handle (by default ```pi = pigpio.pi()```)
+
 When something goes wrong at this stage, there is no exceptions handling, so the user will get a standard error message from python interpreter.
 
 ### ```get_t()``` - measure temperature
@@ -42,26 +43,31 @@ Returns a tuple:
 - Temperature in degrees Celsius,
 - TEMP - auxilary variable used for calculations,
 - dT - auxilary variable used for calculations
+
 When unable to fetch the data or any other error, returns ```None``` values.
 
 ### ```get_tp()``` - measure temperature and pressure
 Returns a tuple:
 - Temperature in degrees Celsius,
 - Pressure in mbar or hPa (which is the same)
+
 When unable to fetch the data or any other error, returns ```None``` values. Note that the pressure measurement depends on the ambient temperature, so that there is no method for independent pressure measurement.
 
 ### ```get_rh()``` - measure relative humidity
-Returns relative humidity in %. Temperature reading can be passed to this method for a slightly better accuracy of the relative humidity measurement. If no temperature is passed to the method, then it measures the relative humidity with no correction. When unable to fetch the data or any other error, returns ```None```.
+Returns relative humidity in %. Temperature reading can be passed to this method for a slightly better accuracy of the relative humidity measurement. If no temperature is passed to the method, then it measures the relative humidity with no correction. 
+When unable to fetch the data or any other error, returns ```None```.
 
 ### ```get_tph()``` - measure temperature, pressure and humidity
 Returns a tuple:
 - Temperature in degrees Celsius,
 - Pressure in mbar or hPa (which is the same),
 - Relative humidity in %
+
 When unable to fetch the data or any other error, returns ```None```.
 
 ### ```get_th``` - measure temperature and humidity
 Returns a tuple:
 - Temperature in degrees Celsius,
 - Relative humidity in %
+
 When unable to fetch the data or any other error, returns ```None```.
