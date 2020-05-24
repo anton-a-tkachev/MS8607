@@ -83,6 +83,6 @@ When unable to fetch the data or any other error, returns ```None```.
 ### ```get_th()``` - measure temperature and humidity
 Returns a tuple:
 - Temperature in degrees Celsius,
-- Relative humidity in %
+- Relative humidity in % (temperature compensated for a slightly better accuracy)
 
 When unable to fetch the data or any other error, returns ```None```.
