@@ -32,7 +32,7 @@ You can simply run the file with ```python example.py``` from your terminal
 ## MS8607 list of methods
 Here are enumerated the methods to communicate with the MS8607 board via I2C interface in Python
 
-### ```MS8607()``` - constructor
+### ```MS8607(i2c_bus, pi)``` - constructor
 Initializes a connection with the sensors, resets the sensors, and fetches conversion coefficients from 0x76 device - temperature and pressure sensor.
 The constructor takes two variables:
 - I2C bus number (by default ```i2c_bus = 1```)
@@ -56,7 +56,7 @@ Returns a tuple:
 
 When unable to fetch the data or any other error, returns ```None``` values. Note that the pressure measurement depends on the ambient temperature, so that there is no method for independent pressure measurement.
 
-### ```get_rh()``` - measure relative humidity
+### ```get_rh(T)``` - measure relative humidity
 Returns relative humidity in %. Temperature reading can be passed to this method for a slightly better accuracy of the relative humidity measurement. If no temperature is passed to the method, then it measures the relative humidity with no correction. 
 When unable to fetch the data or any other error, returns ```None```.
 
@@ -68,7 +68,7 @@ Returns a tuple:
 
 When unable to fetch the data or any other error, returns ```None```.
 
-### ```get_th``` - measure temperature and humidity
+### ```get_th()``` - measure temperature and humidity
 Returns a tuple:
 - Temperature in degrees Celsius,
 - Relative humidity in %
