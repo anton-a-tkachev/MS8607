@@ -41,6 +41,15 @@ print(sensor.get_th())     # get temperature and humidity
 print(sensor.get_tph())    # get temperature, pressure and humidity
 ```
 
+Which should output something like this
+```
+(21.696204048395156, 2169.6204048395157, 52631)
+57.564300537109375
+(21.718119245767593, 986.0175926909147)
+(21.84103772044182, 57.88805793225765)
+(21.730527114868163, 986.0183309207076, 57.700319343566896)
+```
+
 ## MS8607 list of methods
 Here are enumerated the methods to communicate with the MS8607 board via I2C interface in Python
 
