@@ -50,7 +50,7 @@ The constructor takes two variables:
 - I2C bus number (by default ```i2c_bus = 1```)
 - pigpio connection handle (by default ```pi = pigpio.pi()```)
 
-When something goes wrong at this stage, there is no exception handling so that the user will get a standard error message from the python interpreter.
+When something goes wrong at this stage, there is no exception handling so that the user will get a standard error message from python interpreter.
 
 ### ```get_t()``` - measure temperature
 Attempts to fetch temperature data from the MS8607 board.
